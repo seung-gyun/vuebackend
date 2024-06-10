@@ -34,19 +34,24 @@
 		<version>3.0.3</version>
 	</dependency>
 	
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-jdbc</artifactId>
-    <version>2.6.0</version>
-</dependency>		
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-jdbc</artifactId>
+		<version>3.3.0</version>
+	</dependency>		
 
-<dependency>
-    <groupId>com.oracle.database.jdbc</groupId>
-    <artifactId>ojdbc11</artifactId> <!-- 예상 artifactId -->
-    <version>21.1.0.0</version> <!-- 예상 버전 -->
-</dependency>
+	<dependency>
+		<groupId>com.oracle.database.jdbc</groupId>
+		<artifactId>ojdbc11</artifactId> <!-- 예상 artifactId -->
+		<version>21.1.0.0</version> <!-- 예상 버전 -->
+	</dependency>
 
-
+	<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>1.18.22</version> <!-- Lombok의 최신 버전으로 업데이트 가능 -->
+		<scope>provided</scope>
+	</dependency>
 
 	</dependencies>
 
@@ -58,5 +63,7 @@
 			</plugin>
 		</plugins>
 	</build>
+
+
 
 </project>

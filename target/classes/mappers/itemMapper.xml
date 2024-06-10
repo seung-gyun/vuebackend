@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.myapp.mapper.ItemMapper">
+    <select id="selectAll" resultType="hashmap">
+        SELECT id, name, imgpath, TO_CHAR(price, 'FM999,999,999,999,999,999') AS PRICE, discountper, 
+        TO_CHAR(price-(price * discountper / 100) , 'FM999,999,999,999,999,999') realprice
+        FROM ITEMS
+    </select>
+</mapper>

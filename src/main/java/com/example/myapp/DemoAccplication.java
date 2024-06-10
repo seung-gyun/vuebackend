@@ -1,11 +1,9 @@
 package com.example.myapp;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@MapperScan("com.example.myapp.Mapper")  // 매퍼 인터페이스 패키지 스캔 설정
 @SpringBootApplication
 public class DemoAccplication {
 
@@ -25,13 +23,24 @@ public class DemoAccplication {
 		 * 사용한다.
 		 * 3. NONE은 그냥 자바파일 실행
 		 */
- 
-
 		 
 		application.setBannerMode(Banner.Mode.OFF);
 		application.run(args);
 		
 		
+
 	}
+
+	// @Bean
+    // public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
+    //     SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
+    //     sessionFactory.setDataSource(dataSource);
+        
+    //     Resource[] res = new PathMatchingResourcePatternResolver().getResources("classpath:mappers/*.xml");
+    //     sessionFactory.setMapperLocations(res);
+        
+    //     return sessionFactory.getObject();
+    // }
+
 
 }
