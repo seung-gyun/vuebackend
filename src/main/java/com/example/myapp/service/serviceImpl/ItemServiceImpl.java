@@ -9,15 +9,25 @@ import com.example.myapp.dto.ItemDTO;
 import com.example.myapp.mapper.ItemMapper;
 import com.example.myapp.service.ItemService;
 
-
 @Service
 public class ItemServiceImpl implements ItemService{
 
     @Autowired(required =true)
 	ItemMapper itemMapper;
-	
+
 	public List<ItemDTO> selectAll() {
-		return itemMapper.selectAll();
+		
+		System.out.println();
+
+		try {
+			return itemMapper.selectAll();
+		} catch (Exception e) {
+			
+			throw new RuntimeException();
+			
+		}
+
+		
 	}
 
 }

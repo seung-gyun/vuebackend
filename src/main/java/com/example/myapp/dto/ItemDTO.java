@@ -1,24 +1,25 @@
 package com.example.myapp.dto;
 
 public class ItemDTO {
-    private int i;
-    private String NAME;
+    private int id;
+    private String name;
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     // Getter 메서드
-    public int getI() {
-        return i;
+    public int getId() {
+        return id;
     }
 
-    public String getNAME인() {
-        return NAME;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    // Setter 메서드
-    public void setI(int i) {
-        this.i = i;
+    public String getName() {
+        return name;
     }
 
-    public void setNAME인(String NAME) {
-        this.NAME = NAME;
-    }
+   
 }
