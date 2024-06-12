@@ -3,7 +3,9 @@ package com.example.myapp.controller;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
 import com.example.myapp.dto.MemberDTO;
 import com.example.myapp.service.MemberService;
@@ -25,7 +27,7 @@ public class MemberController {
 			return member.getId();
 		}
 
-		return 0;
+		throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
 	}
 	
