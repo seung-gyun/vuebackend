@@ -20,6 +20,5 @@ public class ItemDTO {
     public String getName() {
         return name;
     }
-
    
 }

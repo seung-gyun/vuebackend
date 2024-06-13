@@ -17,10 +17,10 @@ public class ItemServiceImpl implements ItemService{
 
 	public List<ItemDTO> selectAll() {
 		
-		System.out.println();
-
 		try {
+			
 			return itemMapper.selectAll();
+
 		} catch (Exception e) {
 			
 			throw new RuntimeException();
