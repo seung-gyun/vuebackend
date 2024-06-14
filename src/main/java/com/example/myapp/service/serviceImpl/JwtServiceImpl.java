@@ -75,4 +75,24 @@ public class JwtServiceImpl implements JwtService{
 
     }
 
+    @Override
+    public boolean isValid(String token){
+
+        return this.getClaims(token)!=null;
+
+    }
+
+    @Override
+    public int  getId(String token){
+
+        Claims claims = this.getClaims(token);
+
+        if(claims!=null){
+            return Integer.parseInt(claims.get("id").toString());
+        }
+
+        return 0;
+
+    }
+
 }

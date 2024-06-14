@@ -8,4 +8,14 @@
         TO_CHAR(price-(price * discountper / 100) , 'FM999,999,999,999,999,999') realprice
         FROM ITEMS
     </select>
+
+    <select id="findByIdIn" parameterType="java.util.List" resultType="com.example.myapp.dto.ItemDTO">
+        SELECT ID, NAME, IMGPATH
+        FROM ITEMS
+        WHERE ID IN
+        <foreach item="id" collection="list" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+
 </mapper>

@@ -3,8 +3,8 @@ package com.example.myapp.dto;
 public class CartDTO {
     
     private int id;
-    private String memberId;
-    private String itemId;
+    private int memberId;
+    private int itemId;
 
     public void setId(int id) {
         this.id = id;
@@ -15,19 +15,19 @@ public class CartDTO {
         return id;
     }
 
-    public void setmemberId(String memberId) {
+    public void setMemberId(int memberId) {
         this.memberId = memberId;
     }
 
-    public String getmemberId() {
+    public int getMemberId() {
         return memberId;
     }
    
-    public void setItemId(String itemId) {
+    public void setItemId(int itemId) {
         this.itemId = itemId;
     }
 
-    public String getItemId() {
+    public int getItemId() {
         return itemId;
     }
 

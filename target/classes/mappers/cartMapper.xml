@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.myapp.mapper.CartMapper">
+    <select id="findByMemberId" parameterType = "int"  resultType="com.example.myapp.dto.CartDTO">
+        SELECT ID, ITEMID, MEMBERID
+        FROM CARTS
+        WHERE MEMBERID = #{memberId}
+    </select>
+    
+    <select id="findByMemberIdAndItemId" parameterType = "java.util.Map"  resultType="com.example.myapp.dto.CartDTO">
+        SELECT ID, ITEMID, MEMBERID
+        FROM CARTS
+        WHERE 1=1 
+        <if test="itemId != null">
+            AND ITEMID = #{itemId}
+        </if>
+        <if test="memberId != null">
+            AND MEMBERID = #{memberId}
+        </if>
+
+    </select>
+
+    <insert id="cartSave" parameterType = "com.example.myapp.dto.CartDTO">
+        INSERT INTO CARTS (memberid,itemid)  VALUES (#{memberId},#{itemId})
+    </insert>
+
+</mapper>
+

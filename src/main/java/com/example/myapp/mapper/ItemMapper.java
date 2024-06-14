@@ -9,4 +9,5 @@ import com.example.myapp.dto.ItemDTO;
 @Mapper
 public interface ItemMapper {
     List<ItemDTO> selectAll();
+    List<ItemDTO> findByIdIn(List<Integer> ids);
 }

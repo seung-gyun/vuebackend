@@ -30,4 +30,16 @@ public class ItemServiceImpl implements ItemService{
 		
 	}
 
+	public List<ItemDTO> findByIdIn(List<Integer> ids){
+		try {
+			
+			return itemMapper.findByIdIn(ids);
+
+		} catch (Exception e) {
+			
+			throw new RuntimeException();
+			
+		}
+	};	
+
 }
