@@ -26,5 +26,13 @@
         INSERT INTO CARTS (memberid,itemid)  VALUES (#{memberId},#{itemId})
     </insert>
 
+    <delete id="cartDelete" parameterType = "com.example.myapp.dto.CartDTO">
+        
+        DELETE FROM 
+        CARTS 
+        WHERE memberid = #{memberId} AND itemid = #{itemId}
+
+    </delete>
+
 </mapper>
 

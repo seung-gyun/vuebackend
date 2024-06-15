@@ -9,5 +9,6 @@ public interface CartService {
     public List<CartDTO> findByMemberId(int memberId);
     public CartDTO findByMemberIdAndItemId(int memberId, int itemId);
     public void cartSave(CartDTO cartdto);
+    public void cartDelete(CartDTO cartdto);
 
 } 

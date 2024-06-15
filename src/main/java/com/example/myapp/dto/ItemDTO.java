@@ -4,6 +4,8 @@ public class ItemDTO {
     private int id;
     private String name;    
     private String imgpath;    
+    private int price;
+    private String realprice;    
 
     public void setId(int id) {
         this.id = id;
@@ -28,6 +30,23 @@ public class ItemDTO {
 
     public String getImgpath() {
         return imgpath;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    // Getter 메서드
+    public int getPrice() {
+        return price;
+    }
+
+    public void setRealprice(String realprice) {
+        this.realprice = realprice;
+    }
+
+    public String getRealprice() {
+        return realprice;
     }
 
 }
