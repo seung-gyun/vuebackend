@@ -13,5 +13,6 @@ public interface CartMapper {
     public CartDTO findByMemberIdAndItemId(int memberId, int itemId);
     public void cartSave(CartDTO cartdto);
     public void cartDelete(CartDTO cartdto);
+    public void cartDeleteAll(int memberId);
 
 }

@@ -47,4 +47,11 @@ public class CartServiceImpl implements CartService{
 
 	}
 
+	@Override
+	public void cartDeleteAll(int memberId){
+
+		cartMapper.cartDeleteAll(memberId);
+
+	}
+
 }

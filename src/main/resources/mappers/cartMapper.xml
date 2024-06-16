@@ -34,5 +34,13 @@
 
     </delete>
 
+    <delete id="cartDeleteAll" parameterType = "int">
+        
+        DELETE FROM 
+        CARTS 
+        WHERE memberid = #{memberId}
+
+    </delete>
+
 </mapper>
 
